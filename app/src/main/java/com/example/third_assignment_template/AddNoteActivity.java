@@ -25,8 +25,8 @@ public class AddNoteActivity extends AppCompatActivity {
         //https://stackoverflow.com/questions/14034803/misbehavior-when-trying-to-store-a-string-set-using-sharedpreferences
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor spEd = sp.edit();
-        Set<String> oldSet = sp.getStringSet("notes", new HashSet<String>());
-        Set<String> newStrSet = new HashSet<String>();
+        Set<String> oldSet = sp.getStringSet("notes", new HashSet<>());
+        Set<String> newStrSet = new HashSet<>();
         newStrSet.add(txtNote.getText().toString());
         newStrSet.addAll(oldSet);
 
